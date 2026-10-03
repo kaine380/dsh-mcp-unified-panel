@@ -12,6 +12,12 @@
 [![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.5--rc.0%20%3C0.3.0-4d6bfe)](https://github.com/deepseek-ai/deepseek-harness)
 [![All-in-One](https://img.shields.io/badge/Design-All--in--One-success.svg)](#)
 
+<br /><br />
+
+<img src="assets/mcp.png" alt="能力库 - MCP 服务器管理" width="760" />
+<br /><br />
+<img src="assets/skill.png" alt="能力库 - 技能管理" width="760" />
+
 </div>
 
 ---
