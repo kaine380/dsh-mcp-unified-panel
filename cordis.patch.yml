@@ -1,0 +1,11 @@
+# dsh-mcp-unified-panel bundle patch.
+# Installed with `dsh plugin --profile <name> add <this package>`, the profile
+# auto-appends it to dsh.profile.bundles and applies this layer, so the plugin
+# mounts without any manual cordis.patch.yml editing.
+#
+# Side-by-side rule: this fork owns ONLY the `dsh-mcp-unified-panel:mcp:*`
+# markers. The upstream `dsh-skill-mcp-panel:mcp:*` block stays owned by the
+# upstream panel until it is retired (its bundle row `disabled: true`).
+- insert:
+    - id: mcp-unified-panel
+      name: dsh-mcp-unified-panel

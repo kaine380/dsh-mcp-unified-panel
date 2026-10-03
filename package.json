@@ -1,0 +1,73 @@
+{
+  "name": "dsh-mcp-unified-panel",
+  "version": "1.0.0",
+  "description": "能力库 (Unified MCP & Skill Hub): All-in-One MCP & Skill manager for DeepSeek Harness with feature-based row recognition and built-in OAuth 2.1 client driver.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaine380/dsh-mcp-unified-panel.git"
+  },
+  "homepage": "https://github.com/kaine380/dsh-mcp-unified-panel#readme",
+  "bugs": {
+    "url": "https://github.com/kaine380/dsh-mcp-unified-panel/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "mcp",
+    "skills",
+    "oauth"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./oauth-client": "./lib/oauth-client/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/dsh-home-paths": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-subprocess": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-typert-protocol": "^0.1.0-rc.6",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "chokidar": "^5.0.0",
+    "fflate": "^0.8.3",
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.5-rc.0 <0.3.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "bin": {
+    "dsh-mcp-unified": "lib/cli.js"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "README.md",
+    "LICENSE",
+    "cordis.patch.yml"
+  ]
+}
